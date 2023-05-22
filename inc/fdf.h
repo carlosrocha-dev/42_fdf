@@ -6,7 +6,7 @@
 /*   By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:12:08 by caalbert          #+#    #+#             */
-/*   Updated: 2023/02/01 14:36:47 by caalbert         ###   ########.fr       */
+/*   Updated: 2023/05/22 11:14:59 by caalbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,17 @@
 # include "/usr/X11/lib/mlx.h"
 # include <stdio.h>
 # include <math.h>
-# include <X11/keysym.h>
+# include </opt/X11/include/X11/keysym.h>
 # include <X11/X.h>
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+# include <Carbon/Carbon.h>
 
 # define WIN_T			"FDF - 42SP (caalbert)"
-# define WIN_T_BONUS	"FDF - 42SP (caalbert) - BONUS"
-# define WIN_W			1280
-# define WIN_H			720
+# define WIN_T_BONUS	"FDF - 42SP (caalbert) - MACOS M1 version"
+# define WIN_W			1580
+# define WIN_H			1020
 # define WHITE			0xFFFFFFFF
 # define BLACK			0x000000
 # define CORAL			0x9e3b42
@@ -40,6 +41,40 @@
 # define HIGHTER		CORAL
 # define LOWER			CORAL_L
 # define ISO			0.6
+
+# ifdef __APPLE__
+# define KEY_ESC		53
+# define KEY_EQUAL		24
+# define KEY_MINUS		27
+# define KEY_LEFT		123
+# define KEY_RIGHT		124
+# define KEY_UP			126
+# define KEY_DOWN		125
+# define KEY_W			13
+# define KEY_S			1
+# define KEY_D			2
+# define KEY_A			0
+# define KEY_K			40
+# define KEY_J			38
+# define KEY_T			17
+# define KEY_R			15
+# else
+# define KEY_ESC		 XK_Escape
+# define KEY_EQUAL		 XK_equal
+# define KEY_MINUS		 XK_minus
+# define KEY_LEFT		 XK_Left
+# define KEY_RIGHT		 XK_Right
+# define KEY_UP		 XK_Up
+# define KEY_DOWN		 XK_Down
+# define KEY_W		 XK_w
+# define KEY_S		 XK_s
+# define KEY_D		 XK_d
+# define KEY_A		 XK_a
+# define KEY_K		 XK_k
+# define KEY_J		 XK_j
+# define KEY_T		 XK_t
+# define KEY_R		 XK_r
+# endif
 
 typedef struct s_pt
 {

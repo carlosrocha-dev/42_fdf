@@ -6,7 +6,7 @@
 #    By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 12:50:52 by caalbert          #+#    #+#              #
-#    Updated: 2023/02/01 14:57:19 by caalbert         ###   ########.fr        #
+#    Updated: 2023/05/22 10:35:56 by caalbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ LIBFT			:= ${LIBFTDIR}libft.a
 ifeq (${UNAME}, Linux)
 	MLXFLAGS		:=	-lmlx -Ilmlx -lXext -lX11
 else
-	MLXFLAGS		:=	-L./minilibx/ -lmlx -Ilmlx -lXext -lX11 -framework OpenGL -framework AppKit
+	MLXFLAGS		:=	-L./minilibx/ -lmlx -Ilmlx -L/opt/X11/lib -lXext -lX11 -framework OpenGL -framework AppKit
 endif
 LIBS			:= ${MLXFLAGS} -L${LIBFTDIR} -lft -lm
 INCS			:= -I${HEADDIR} -I${LIBFTDIR}
@@ -130,7 +130,7 @@ fclean:			clean
 				@echo ""
 				make -C ${LIBFTDIR} fclean
 				@echo ""
-				
+
 re:				fclean all
 
 bonus:			${BONUSNAME}
