@@ -7,6 +7,10 @@
 
 </div>
 
+![Captura de Tela 2023-05-22 às 12 58 23](https://github.com/carlosrocha-dev/42_fdf/assets/3737837/742af0ce-284c-439a-a7f7-6ca9b1637144)
+
+![Captura de Tela 2023-05-22 às 12 59 53](https://github.com/carlosrocha-dev/42_fdf/assets/3737837/7467ffde-284c-4f1a-8c91-29b83f3ca6a0)
+
 ## Dependences
 
 - X11 e suas bibliotecas, incluindo X11/keysym.h,
