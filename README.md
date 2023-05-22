@@ -88,11 +88,3 @@ If you compiled the bonus part of the project, you can run it with:
 
 ```bash > ./fdf_bonus test_maps/<file_name.fdf>```
 Again, replace <file_name.fdf> with the name of the file you want to use.
-
-## Contributing
-
-If you want others to contribute to your project, provide instructions on how they can do so.
-
-## License
-
-Include information about the license under which your project is distributed.
