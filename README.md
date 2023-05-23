@@ -13,6 +13,8 @@
 
 ![Captura de Tela 2023-05-22 às 12 59 53](https://github.com/carlosrocha-dev/42_fdf/assets/3737837/7467ffde-284c-4f1a-8c91-29b83f3ca6a0)
 
+![fdf_infografic](https://github.com/carlosrocha-dev/42_fdf/assets/3737837/3717714e-4c05-4294-bc75-d8e96c56da75)
+
 ## Dependences
 
 - X11 e suas bibliotecas, incluindo X11/keysym.h,
