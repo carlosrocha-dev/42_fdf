@@ -7,6 +7,14 @@
 
 </div>
 
+![Captura de Tela 2023-05-22 às 12 58 23](https://github.com/carlosrocha-dev/42_fdf/assets/3737837/742af0ce-284c-439a-a7f7-6ca9b1637144)
+
+![Captura de Tela 2023-05-22 às 13 02 52](https://github.com/carlosrocha-dev/42_fdf/assets/3737837/85790284-4137-4723-b06e-66a86b4f5fc9)
+
+![Captura de Tela 2023-05-22 às 12 59 53](https://github.com/carlosrocha-dev/42_fdf/assets/3737837/7467ffde-284c-4f1a-8c91-29b83f3ca6a0)
+
+![fdf_infografic](https://github.com/carlosrocha-dev/42_fdf/assets/3737837/3717714e-4c05-4294-bc75-d8e96c56da75)
+
 ## Dependences
 
 - X11 e suas bibliotecas, incluindo X11/keysym.h,
@@ -22,7 +30,8 @@
 
 ## Description
 
-This is where you provide a brief description of your project. Explain what your project does, its features, and any other relevant information.
+This project is about representing a landscape as a 3D object
+in which all surfaces are outlined in lines.
 
 ## Dependencies
 
@@ -81,11 +90,3 @@ If you compiled the bonus part of the project, you can run it with:
 
 ```bash > ./fdf_bonus test_maps/<file_name.fdf>```
 Again, replace <file_name.fdf> with the name of the file you want to use.
-
-## Contributing
-
-If you want others to contribute to your project, provide instructions on how they can do so.
-
-## License
-
-Include information about the license under which your project is distributed.
