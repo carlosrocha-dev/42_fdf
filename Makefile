@@ -6,9 +6,10 @@
 #    By: caalbert <caalbert@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 12:50:52 by caalbert          #+#    #+#              #
-#    Updated: 2023/05/22 10:35:56 by caalbert         ###   ########.fr        #
+#    Updated: 2023/07/29 14:12:32 by caalbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME			:= fdf
 BONUSNAME		:= fdf_bonus
@@ -61,7 +62,7 @@ LIBFT			:= ${LIBFTDIR}libft.a
 ifeq (${UNAME}, Linux)
 	MLXFLAGS		:=	-lmlx -Ilmlx -lXext -lX11
 else
-	MLXFLAGS		:=	-L./minilibx/ -lmlx -Ilmlx -L/opt/X11/lib -lXext -lX11 -framework OpenGL -framework AppKit
+	MLXFLAGS		:=	-L./minilibx/ -lmlx -Ilmlx -L/opt/homebrew/lib -lXext -lX11 -framework OpenGL -framework AppKit
 endif
 LIBS			:= ${MLXFLAGS} -L${LIBFTDIR} -lft -lm
 INCS			:= -I${HEADDIR} -I${LIBFTDIR}
@@ -71,6 +72,9 @@ YELLOW			:= \033[1;33m
 GREEN			:= \033[1;32m
 RED				:= \033[1;31m
 RESET			:= \033[0m
+
+CPATH 			:= /opt/homebrew/include
+export CPATH
 
 ${NAME}:		${LIBFT} ${OBJSDIR} ${OBJS}
 				@echo ""
@@ -154,10 +158,5 @@ push:
 	@echo "\033[1;38m \n" ;
 	@git commit -m "Feat(automatic): push all modification on file." -v;
 	@echo "\033[1;36m \n" ;
-	@git push -v;
-	@echo "\n\n${GREEN}\t * Pushing complete * ${RESET}\n\n" ;
-
-pull:
-	@echo "\n\n\${YELLOW}\t * Starting Updated project * ${RESET}" ;
-	@git pull --l
-	@echo "${GREEN}\t * Project Updated  * ${RESET}\n\n" ;
+	@git push;
+	@echo "\n\n${YELLOW}\t * Finished pushing - Feat(automatic) * ${RESET}" ;
